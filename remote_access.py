@@ -3,12 +3,12 @@ import time
 import paramiko
 
 
-key = paramiko.RSAKey.from_private_key_file(r'/opt/python_scripts/suresh')
+key = paramiko.RSAKey.from_private_key_file(r'suresh')
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-out_file = open(r'/opt/python_scripts/connection_results.txt','w+')
-in_file = open(r'/opt/python_scripts/servers.txt')
+out_file = open(r'connection_results.txt','w+')
+in_file = open(r'servers.txt')
 for host in in_file:
       host=host.strip()
       print ("Checking server",host)
